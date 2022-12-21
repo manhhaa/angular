@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!-- saved from url=(0033)http://127.0.0.1:5500/index.html? -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Javascript</title>
+    <link rel="stylesheet" href="./Demo Javascript_files/main.css">
+    <!-- CSS only -->
+    <link href="./Demo Javascript_files/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+    <script src="./Demo Javascript_files/bootstrap.bundle.min.js.download" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="./Demo Javascript_files/bootstrap-icons.css">
+</head>
+<body>
+    <div class="form-sign-up">
+        <form class="form-login" novalidate="">
+            <div class="form-login-header">
+                <i class="bi bi-pencil-square"></i>
+                <span>REGISTER</span>
+            </div>
+            <div class="form-login-input">
+                <div class="mb-3 set-row">
+                    <label for="exampleInputUsername" class="form-label"><i class="bi bi-person-circle"></i></label>
+                    <input type="text" class="form-control" id="exampleInputUsername" placeholder="Username">
+                </div>
+                <div class="mb-3 set-row">
+                    <label for="exampleInputPassword1" class="form-label"><i class="bi bi-file-lock-fill"></i></label>
+                    <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="mb-3 set-row">
+                    <label for="exampleInputPassword1" class="form-label"><i class="bi bi-file-lock-fill"></i></label>
+                    <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="mb-3 set-row">
+                    <label for="exampleInputEmail1" class="form-label"><i class="bi bi-envelope"></i></label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+                <div class="col-12 check">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required="">
+                        <label class="form-check-label" for="invalidCheck">
+                            I agree to the <span>Terms of Servicee</span>
+                        </label>
+                        <div class="invalid-feedback">
+                            You must agree before submitting.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 btn-submit">
+                    <button class="btn btn-color" type="submit">Sign up</button>
+                </div>
+                <div class="col-12 login">
+                    <label for="">Already a member ? <span>Login Here</span></label>
+                </div>
+            </div>
+        </form>
+    </div>
+
+<script src="./Demo Javascript_files/index.js.download"></script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>

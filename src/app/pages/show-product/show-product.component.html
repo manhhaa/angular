@@ -1,0 +1,39 @@
+<div class="product-detail">
+  <div class="header-links">
+    <div class="nav-lists">
+      <a routerLink="/" class="link-home-product">Home</a>
+      <a>Accordion & Concertina</a>
+      <span>{{product.productContent}}</span>
+    </div>
+  </div>
+  <div class="section-product">
+    <div class="section-img">
+      <img src="{{product.img}}" alt="">
+    </div>
+    <div class="section-title">
+      <h4 class="section-title-content">{{product.productContent}}</h4>
+      <span>We love music and love what we do!</span>
+      <h2 class="fw-bold py-2">${{product.price}}</h2>
+      <div class="select-color">
+        <label>Color</label>
+        <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+          <option selected value="1">Black</option>
+          <option value="2">Dark Blue</option>
+          <option value="3">Red</option>
+        </select>
+      </div>
+      <div class="select-color">
+        <label>Quantity:</label>
+        <input type="number" min="1" value="1">
+      </div>
+      <div class="select-color py-2">
+        <label>Available quantity :</label>
+        <label>2000</label>
+      </div>
+      <div class="btn-show">
+        <button class="btn btn-hover" routerLink="/shopping-cart" (click)="addToCart(product)">Add to card</button>
+        <button class="btn btn-hover" routerLink="/comparison-page">Compare</button>
+      </div>
+    </div>
+  </div>
+</div>

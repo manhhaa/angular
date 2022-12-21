@@ -1,0 +1,75 @@
+<section class="section-section">
+  <div class="header-slider">
+    <carousel>
+      <slide>
+        <img src="./assets/img/homeSlider1.jpg" alt="first slide" style="display: block; width: 100%;">
+        <div class="carousel-caption d-none d-md-block">
+          <h3>ACOUSTIC GUITARS</h3>
+          <p>CHOOSE FROM A GREAT SELECTION</p>
+        </div>
+      </slide>
+      <slide>
+        <img src="./assets/img/homeSlider2.jpg" alt="second slide" style="display: block; width: 100%;">
+        <div class="carousel-caption d-none d-md-block text-dark">
+          <h3>DRUMS</h3>
+          <p>CHOOSE FROM A GREAT SELECTION</p>
+        </div>
+      </slide>
+      <slide>
+        <img src="./assets/img/homeSlider3.jpg" alt="third slide" style="display: block; width: 100%;">
+        <div class="carousel-caption d-none d-md-block text-dark">
+          <h3>BASS GUITARS</h3>
+          <p>SAVE 20% OFF</p>
+        </div>
+      </slide>
+      <slide>
+        <img src="./assets/img/homeSlider4.jpg" alt="third slide" style="display: block; width: 100%;">
+        <div class="carousel-caption d-none d-md-block">
+          <h3>VIOLINS</h3>
+          <p>GET UP TO 25% OFF</p>
+        </div>
+      </slide>
+    </carousel>
+    <div class="content-sale-order">
+      <div class="header-sale">GET AN EXTRA</div>
+      <div class="header-sale-percent-1">10%</div>
+      <div class="header-sale-percent-2">OFF</div>
+      <div class="header-sale-content">YOUR FIRST ORDER</div>
+      <div class="header-btn-sale">
+        <button class="btn-sale" routerLink="/accordion">SHOP NOW!</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-list-product">
+    <a class="section-product" style="background-image: url('./assets/img/keyboard.jpg');" routerLink="/keyboard">keyboard</a>
+    <a class="section-product" style="background-image: url('./assets/img/accdion.jpg');" routerLink="/accordion">accordion</a>
+    <a class="section-product" style="background-image: url('./assets/img/drums.jpg');" routerLink="/drum">drums</a>
+    <a class="section-product" style="background-image: url('./assets/img/guitar.jpg');" routerLink="/guitar">guitar</a>
+  </div>
+
+  <div class="home-product">
+    <h1 class="list-product-header">Featured products</h1>
+    <div class="show-list-product home-list-product" id="list-product">
+      <div class="section-show-product">
+        <div id="list-accordion" class="show-list-product">
+          <div class="list-product" *ngFor="let keyboard of keyboards | filter:searchKey:'productContent'">
+            <div class="list-product-img">
+              <img src="{{keyboard.img}}" alt="">
+            </div>
+            <div class="list-product-info" routerLink="/show-product" (click)="showDetailItem(keyboard)">
+              <p>{{keyboard.productContent}}</p>
+            </div>
+            <div class="list-product-price">
+              <span>{{keyboard.price}}</span>
+            </div>
+            <div class="list-product-btn-buy">
+              <button type="button" (click)="addToCart(keyboard)"><i class="fa-solid fa-cart-shopping"></i> ADD TO CART
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

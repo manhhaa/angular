@@ -1,0 +1,102 @@
+
+<section class="section-main">
+  <div class="containers">
+    <div class="nav-list">
+      <a routerLink="/">Home</a>
+      <span>Amplifiers</span>
+    </div>
+  </div>
+  <div class="section">
+    <div class="section-title">
+      <h2 class="section-title-content">Amplifiers</h2>
+    </div>
+    <div class="section-list">
+      <div class="section-list-nav">
+        <div class="section-list-category">
+          <h2>Category</h2>
+          <ul class="form-section">
+            <li class="category-list"><a routerLink="/accordion">Pro Audio</a></li>
+            <li class="category-list"><a routerLink="/guitar">Guitars</a></li>
+            <li class="category-list"><a routerLink="/keyboard">Keyboards & Pianos</a></li>
+            <li class="category-list"><a routerLink="/drum">Drums & Percussion</a></li>
+            <li class="category-list"><a routerLink="/amplifier">Amplifiers</a></li>
+          </ul>
+        </div>
+        <div class="section-list-filter">
+          <h2>Filter By</h2>
+          <ul class="form-section-2">
+            <li class="category-list">
+              Price
+              <div class="input-min-max">
+                <input type="number" placeholder="Min">
+                <input type="number" placeholder="Max">
+              </div>
+            </li>
+            <li class="category-list">Brands</li>
+            <li class="category-list">Made in</li>
+            <li class="category-list">Material</li>
+            <li class="category-list">
+              <button type="button" style="cursor: pointer;">Apply</button>
+              <button type="button" style="cursor: pointer;">Clear</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="section-show-cart">
+        <div class="section-show-cart-option">
+          <div class="option-show">
+            <span class="op-show">Show</span>
+            <div class="option-show-select">6<i class="fa-solid fa-chevron-down"></i></div>
+          </div>
+          <div class="option-show">
+            <span class="op-show">Sort By</span>
+            <div class="option-show-select">Oldest first <i class="fa-solid fa-chevron-down"></i></div>
+          </div>
+          <div class="selecf-page">
+            <a class="btn-selecf-page" >1</a>
+            <a class="btn-selecf-page" >2</a>
+          </div>
+        </div>
+        <div class="section-show-product">
+          <div class="section-show-product">
+            <div class="section-show-product">
+              <div id="list-accordion" class="show-list-product">
+                <div class="list-product" *ngFor="let amplifer of amplifers | filter:searchKey:'productContent'">
+                  <div class="list-product-img">
+                    <img src="{{amplifer.img}}" alt="">
+                  </div>
+                  <div class="list-product-info" (click)="showDetailItem(amplifer)" routerLink="/show-product">
+                    <p>{{amplifer.productContent}}</p>
+                  </div>
+                  <div class="list-product-price">
+                    <span>${{amplifer.price}}</span>
+                  </div>
+                  <div class="list-product-btn-buy">
+                    <div  (click)="addToCart(amplifer)"  >
+                      <button type="button"><i class="fa-solid fa-cart-shopping"></i> ADD TO CART</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section-show-cart-option">
+          <div class="option-show">
+            <span class="op-show">Show</span>
+            <div class="option-show-select">6<i class="fa-solid fa-chevron-down"></i></div>
+          </div>
+          <div class="option-show">
+            <span class="op-show">Sort By</span>
+            <div class="option-show-select">Oldest first <i class="fa-solid fa-chevron-down"></i></div>
+          </div>
+          <div class="selecf-page">
+            <a class="btn-selecf-page">1</a>
+            <a class="btn-selecf-page">2</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

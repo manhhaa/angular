@@ -1,0 +1,50 @@
+<!-- google-maps-demo.component.html -->
+
+<div class="forgot-password">
+  <div class="header-link">
+    <div class="nav-list">
+      <a roterLink="/" class="link-home-product">Home</a>
+      <span>Contact Us</span>
+    </div>
+  </div>
+  <div class="section">
+    <div class="section-title">
+      <h2 class="section-title-content">Contact Us</h2>
+    </div>
+    <div class="section-form d-flex justify-content-between">
+      <div class="write-us">
+        <form>
+          <div class="mb-3 title-contact">
+            <h2 class="text-danger">Write Us</h2>
+            <h3>Jot us a note and we’ll get back to you as quickly as possible.</h3>
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control"  aria-describedby="emailHelp" placeholder="Name">
+          </div>
+          <div class="mb-3">
+            <input type="email" class="form-control"  aria-describedby="emailHelp" placeholder="Email">
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control"  aria-describedby="emailHelp" placeholder="Phone Number">
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="What's on your mind?">
+          </div>
+          <div class="mb-3 send-req">
+            <button type="submit" class="btn text-uppercase">Submit</button>
+          </div>
+        </form>
+      </div>
+      <google-map height="364px"
+                  width="570px"
+                  [center]="center"
+                  [zoom]="zoom"
+                  (mapClick)="moveMap($event)"
+                  (mapMousemove)="move($event)">
+      </google-map>
+    </div>
+  </div>
+
+</div>
+
+
